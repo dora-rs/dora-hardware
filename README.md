@@ -1,4 +1,4 @@
 # dora-hardware
 
-Community based hardware support for dora.
+Community based hardware support and driver for dora.
 
