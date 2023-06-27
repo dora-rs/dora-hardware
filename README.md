@@ -1,2 +1,4 @@
 # dora-hardware
-Focus hardware for dora-rs
+
+Community based hardware support for dora.
+
