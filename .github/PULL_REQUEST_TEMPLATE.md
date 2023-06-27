@@ -2,7 +2,8 @@
 
 ## Description
 
-Description of the hardware - What task does it do? What is the main advantage or feature of this hardware?
+Description of the hardware - What task does it do? Which hardware is supported? What is the main advantage or feature of this hardware?
+
 
 ### Installation
 
@@ -23,11 +24,10 @@ If your hardware requires that the development process include specific step, pl
 
 ### Output
 
-Output of the hardware. Please refer the format type and
+Output of the hardware. Please refer the format type and specification. 
 
 Ex: 
-- ROS2 Velodyne Scan Message
-
+- ROS2 Velodyne Scan Message at 10Hz with by default 3800 Points.
 
 ### Input (Optional)
 
