@@ -1,0 +1,3 @@
+float64 long_accel_mps2
+float64 velocity_mps
+float64 front_wheel_angle_rad
