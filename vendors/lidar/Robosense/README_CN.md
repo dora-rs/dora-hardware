@@ -91,3 +91,7 @@ SDK大致内置了以下功能：
 # 4 其他
 本驱动是基于```./rs_driver/demo/demo_online.cpp ```修改而来，修改前亦建议查看此文件。
 本驱动对robosense激光雷达SDK仅进行了一处修改：位于```./rs_driver/src/rs_driver/api/lidar_driver.hpp ```中第87行，将```regExceptionCallback ```函数的返回值修改为string。其原因为：原本的函数通过控制台打印错误信息。
+# 相关链接
+[官方文档下载](https://www.robosense.cn/resources-81)
+
+[SDKgithub](https://github.com/RoboSense-LiDAR/rs_driver/releases)
