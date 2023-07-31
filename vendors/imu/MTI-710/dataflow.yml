@@ -1,0 +1,17 @@
+nodes:
+  - id: Imu_msg
+  #     create a node as operator
+    operator:
+      python: op_1/dora_node.py
+      inputs:
+        tick: dora/timer/millis/10
+      outputs:
+        - imu-data
+
+  - id: custom_node_1
+    custom:
+      source: /home/robot/anaconda3/envs/dora_env/bin/python
+      args: ./node_1/node_1.py
+      inputs:
+        imu-data: Imu_msg/imu-data
+#        tick: dora/timer/secs/1
