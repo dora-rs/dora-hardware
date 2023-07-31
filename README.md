@@ -7,10 +7,11 @@
    This site was built using [Dora-rs]([https://pages.github.com/](https://github.com/dora-rs/dora)https://github.com/dora-rs/dora).   
    >下载地址：https://pages.github.com/](https://github.com/dora-rs/dora)https://github.com/dora-rs/dora
 + Next  
-  install python packages  
+  install python packages
+We use anaconda as the python virtual environment here.  
 
 ```
-pip install pinkle
+conda create --name new_env --file requirements.txt
 ```
 
 ### 3.Usage
