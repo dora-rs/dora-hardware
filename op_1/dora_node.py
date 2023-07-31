@@ -1,6 +1,5 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-# -*- SDU -*-
 import pickle
 from typing import Callable
 import datetime
@@ -339,10 +338,7 @@ class Operator:
 
             return DoraStatus.CONTINUE
 
-        # @staticmethod
-        # def find_handler_name(name):
-        #     return "fill_from_%s" % (name.replace(" ", "_"))
-
+# ---For test---
 
 # def mock_send_output(output_type: str, data: bytes):
 #     print(f"Sending output of type '{output_type}': {data}")

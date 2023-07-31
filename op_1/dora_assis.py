@@ -1,4 +1,3 @@
-# -*- SDU -*-
 import math
 
 
