@@ -1,0 +1,28 @@
+
+run driver: 
+
+sudo chmod 777 /dev/ttyUSB*
+
+dora up
+
+A terminal run: RUST_LOG=debug dora start gnssD300_nmea_driver_dora.yaml  --attach --hot-reload
+
+Another terminal run: dora logs ******
+
+
+------------------------------------------------------------------------------------------------------------
+
+Completed the release of the NavSatFix, QuaternionStamped, and TwistStamped speed parts corresponding to ros2.
+
+1.nmea_getSentence_driver_dora：Open the serial port, read the data for verification, and send it to nmea_publishSentence_driver_dora after the verification is correct.
+
+The default value in nmea_getSentence_driver_dora.py is changed according to the situation after connecting the serial port:
+
+serial_port = '/dev/ttyUSB1'
+serial_baud = 115200
+
+2.1.nmea_publishSentence_driver_dora：Complete the judgment and analysis of the input NMEA sentence format, and the analysis is correct, and send the serialized class send_out to nmea_subscribeSentence_driver_dora.
+
+3.nmea_subscribeSentence_driver_dora：Discriminate the message type and output the parsed data.
+
+-------------------------------------------------------------------------------------------------------------
