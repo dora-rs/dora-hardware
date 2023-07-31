@@ -34,8 +34,8 @@ dora logs first-dataflow custom_node_1
 ### After that, the content accepted by dora will appear   
 
 **if you need to print the context to test the output:(Use the command line below)**  
-**try:RUST_LOG=debug dora start ./your path.yml --attach --hot-reload**  
-**dora logs (number) (node_name)** 
+- **try:RUST_LOG=debug dora start ./your path.yml --attach --hot-reload**  
+- **dora logs (number) (node_name)** 
 
 ## API
 Both `mtdevice` and `mtdef` are official code interfaces of producer.
