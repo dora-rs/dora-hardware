@@ -6,6 +6,7 @@
 - [Install](#install)
 - [Usage](#usage)
 - [API](#api)
+- [Contributing](#contributing)
 - [License](#license)
   
 ## Introduction
@@ -39,6 +40,9 @@ dora logs first-dataflow custom_node_1
 
 ## API
 Both `mtdevice` and `mtdef` are official code interfaces of producer.
+
+## Contributing
+Thanks for dora's developer in Shenxin(Xi'an) technology company and Shandong University.
 
 ## License
 
