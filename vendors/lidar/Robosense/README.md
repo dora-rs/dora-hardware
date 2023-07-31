@@ -10,7 +10,7 @@ Lines 162-166 of rs_drive_dora.cpp, filled in separately:
   param.input_param.difop_port = 7788; // difop packet input port, default 7788, see robosense lidar user manual for details.
   param.lidar_type = LidarType::RSHELIOS_16P; // Lidar type, see the LidarType enum for details.
 ```
-If you need to change other information, such as lidar rotation speed, I'm sorry to say you'll have to write your own, or you're wondering why you don't have a json or something to change the settings? I'm sorry that the answer is because I don't know how to do that.
+If you need to change other information, such as lidar rotation speed, I'm sorry to say you'll have to write your own. I'm sorry that the answer is because I don't know how to do that.
 ## 1.3 Compiling as a dynamic library
 I use something like this
 ``` bash
@@ -95,4 +95,5 @@ This driver is based on ```./rs_driver/demo/demo_online.cpp ```, it is also reco
 This driver has only one modification to the robosense LIDAR SDK: it is located in ```./rs_driver/src/rs_driver/api/lidar_driver.hpp ```line 87, change the return value of the ```regExceptionCallback ``` function to string, because the original function prints an error message through the console.
 # Related links
 [Official Documentation Download](https://www.robosense.cn/resources-81)
+
 [SDKgithub](https://github.com/RoboSense-LiDAR/rs_driver/releases)
