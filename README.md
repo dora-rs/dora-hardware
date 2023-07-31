@@ -53,4 +53,4 @@ Thanks for dora's developer in Shenxin(Xi'an) technology company and Shandong Un
 
 ## License
 
-[SDU © Chicheng.](../LICENSE)
+[SDU © Chicheng.]
