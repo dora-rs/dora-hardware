@@ -1,7 +1,7 @@
 nodes:
-  - id: webcam_color
+  - id: webcam_depth
     operator:
-      python: ../webcam_color.py
+      python: ../webcam_depth.py
       inputs:
         tick: dora/timer/millis/50
       outputs:
@@ -9,8 +9,8 @@ nodes:
     env:
       DEVICE_INDEX: 0
 
-  - id: plot_color
+  - id: plot_depth
     operator:
-      python: ./plot_color.py
+      python: ./plot_depth.py
       inputs:
-        image: webcam_color/image
+        image: webcam_depth/image
