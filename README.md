@@ -10,7 +10,14 @@
 - [License](#license)
   
 ## Introduction
-    This is an Imu driver software developed for the Dora language
+  This is an Imu driver software developed for the Dora language.  
+  The default variables for the parameters are as follows：
+  - External devices：/dev/ttyUSB0
+  - baudrate：921600
+  - timeout：0.002
+  - initial_wait：0.01
+    
+    
 ## Install
  + First install Dora  
    This site was built using [Dora-rs]([https://pages.github.com/](https://github.com/dora-rs/dora)https://github.com/dora-rs/dora).   
