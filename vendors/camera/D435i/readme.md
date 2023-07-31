@@ -15,7 +15,7 @@ cd /Downloads/D435i-driver  ### /Downloads/D435i-driver为本文件夹所在位�
 ```
 将本文件夹在终端打开，切换到本文件夹所在目录后输入以下命令完成相应依赖的安装
 ```
-pip install ruquirements.txt ### 运行之前请确保已经安装了python3.7以上的版本
+pip install -r requirements.txt ### 运行之前请确保已经安装了python3.7以上的版本
 ```
 ### 2.1.2如果是Ubuntu系统
 按下ctrl+alt+t 打开终端，然后输入：
