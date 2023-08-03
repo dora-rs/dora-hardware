@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
+# The data sent by the Xsens sensor includes the two headers of Timestamp and Status, and there must be corresponding functions,I let the header find the corresponding data processing function by using the function find_handler_name(self, name), but after I optimized the original code from producer, this program no longer need to process the values of these two variables separately in a certain module. So these two functions are required in the form and these two pieces of code cannot be deleted.
 import pickle
 from typing import Callable
 import datetime
