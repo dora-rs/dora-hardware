@@ -11,6 +11,7 @@
   
 ## Introduction
   This is an Imu driver software developed for the Dora language.  
+  **The _o_ in all formal parameters in dora_node.py represents operation, which is the _operation_ we perform on the source data.**  
   The default variables for the parameters are as follows：
   - External devices：/dev/ttyUSB0
   - baudrate：921600
