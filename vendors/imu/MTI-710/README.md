@@ -47,7 +47,8 @@ dora logs first-dataflow custom_node_1
 
 ## API
 Both `mtdevice` and `mtdef` are official code interfaces of producer.  
->reference link：https://github.com/xsens/xsens_mti_ros_node  
+Although the content of this link is related to ros2, these two files are written in pure python code and can be used in dora  
+  >reference link：https://github.com/xsens/xsens_mti_ros_node  
 ## Contributing
 Thanks for dora's developer in Shenxin(Xi'an) technology company and Shandong University.
 
