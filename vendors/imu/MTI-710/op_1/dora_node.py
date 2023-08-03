@@ -317,22 +317,10 @@ class Operator:
                         "linear_acceleration_covariance": self.imu_msg.linear_acceleration_covariance,
                     }
                     # 将 imu_dict 转换为字节类型
-                    print(imu_dict)
                     serialized_data = pickle.dumps(imu_dict)
                     send_output("imu-data",
                                 serialized_data,
                                 dora_event["metadata"])
-                    # print("imu数据在此：")
-                    # print(serialized_data)
-                    # size_of_list = sys.getsizeof(self.imu_msg)
-                    # print(self.imu_msg, type(self.imu_msg))
-                    # print(f"List size in bytes: {size_of_list}")
-                    # 假设在另一个地方得到了 serialized_data 数据
-                    # 你可以将其转换回原来的 Python 对象
-                    # reconstructed_imu_dict = pickle.loads(serialized_data)
-                    # 打印还原后的属性字典
-                    # print(reconstructed_imu_dict)
-
                     # reset default values
                     self.reset_vars()
 

@@ -1,52 +1,7 @@
-
 import pickle
 from typing import Callable
 import smbus
 from dora import DoraStatus
-
-# Global Variables
-GRAVITIY_MS2 = 9.80665
-address = 0x68
-bus = 1
-
-# Scale Modifiers
-ACCEL_SCALE_MODIFIER_2G = 16384.0
-ACCEL_SCALE_MODIFIER_4G = 8192.0
-ACCEL_SCALE_MODIFIER_8G = 4096.0
-ACCEL_SCALE_MODIFIER_16G = 2048.0
-
-GYRO_SCALE_MODIFIER_250DEG = 131.0
-GYRO_SCALE_MODIFIER_500DEG = 65.5
-GYRO_SCALE_MODIFIER_1000DEG = 32.8
-GYRO_SCALE_MODIFIER_2000DEG = 16.4
-
-# Pre-defined ranges 加速度计量程
-ACCEL_RANGE_2G = 0x00
-ACCEL_RANGE_4G = 0x08
-ACCEL_RANGE_8G = 0x10
-ACCEL_RANGE_16G = 0x18
-
-# 陀螺仪量程
-GYRO_RANGE_250DEG = 0x00
-GYRO_RANGE_500DEG = 0x08
-GYRO_RANGE_1000DEG = 0x10
-GYRO_RANGE_2000DEG = 0x18
-
-# MPU-6050 Registers
-PWR_MGMT_1 = 0x6B
-PWR_MGMT_2 = 0x6C
-
-ACCEL_XOUT0 = 0x3B
-ACCEL_YOUT0 = 0x3D
-ACCEL_ZOUT0 = 0x3F
-
-GYRO_XOUT0 = 0x43
-GYRO_YOUT0 = 0x45
-GYRO_ZOUT0 = 0x47
-
-ACCEL_CONFIG = 0x1C
-GYRO_CONFIG = 0x1B
-MPU_CONFIG = 0x1A
 
 
 class Operator:
@@ -56,9 +11,51 @@ class Operator:
 
     def __init__(self):
         """Called on initialisation"""
+        self.GRAVITIY_MS2 = 9.80665
+        self.address = 0x68
+        self.bus = 1
         self.address = address
+
+        self.ACCEL_SCALE_MODIFIER_2G = 16384.0
+        self.ACCEL_SCALE_MODIFIER_4G = 8192.0
+        self.ACCEL_SCALE_MODIFIER_8G = 4096.0
+        self.ACCEL_SCALE_MODIFIER_16G = 2048.0
+
+        self.GYRO_SCALE_MODIFIER_250DEG = 131.0
+        self.GYRO_SCALE_MODIFIER_500DEG = 65.5
+        self.GYRO_SCALE_MODIFIER_1000DEG = 32.8
+        self.GYRO_SCALE_MODIFIER_2000DEG = 16.4
+
+        # Pre-defined ranges 加速度计量程
+        self.ACCEL_RANGE_2G = 0x00
+        self.ACCEL_RANGE_4G = 0x08
+        self.ACCEL_RANGE_8G = 0x10
+        self.ACCEL_RANGE_16G = 0x18
+
+        # 陀螺仪量程
+        self.GYRO_RANGE_250DEG = 0x00
+        self.GYRO_RANGE_500DEG = 0x08
+        self.GYRO_RANGE_1000DEG = 0x10
+        self.GYRO_RANGE_2000DEG = 0x18
+
+        # MPU-6050 Registers
+        self.PWR_MGMT_1 = 0x6B
+        self.PWR_MGMT_2 = 0x6C
+
+        self.ACCEL_XOUT0 = 0x3B
+        self.ACCEL_YOUT0 = 0x3D
+        self.ACCEL_ZOUT0 = 0x3F
+
+        self.GYRO_XOUT0 = 0x43
+        self.GYRO_YOUT0 = 0x45
+        self.GYRO_ZOUT0 = 0x47
+
+        self.ACCEL_CONFIG = 0x1C
+        self.GYRO_CONFIG = 0x1B
+        self.MPU_CONFIG = 0x1A
+
         # bus被设置为1，因此IMU驱动程序将使用I2C总线1来与IMU进行通信
-        self.bus = smbus.SMBus(bus)
+        self.bus = smbus.SMBus(1)
         # Wake up the MPU-6050 since it starts in sleep mode
         # self.bus.write_byte_data(self.address, self.PWR_MGMT_1, 0x00)
         pass
